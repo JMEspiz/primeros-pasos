@@ -11,7 +11,7 @@
   - [Libros](#libros)
 
 
-Somos una comunidad que promueve el aprendizaje colectivo, con miembros dispuestos a enseñar, aprender y compartir conocimientos. Queremos invitarte a que formes parte de ella. Encuentranos en nuetsras redes:
+Somos una comunidad que promueve el aprendizaje colectivo, con miembros dispuestos a enseñar, aprender y compartir conocimientos. Queremos invitarte a que formes parte de ella. Encuentranos en nuestras redes:
 
  - [Google Groups](bit.ly/ng-venezuela-google-groups) : Tienes alguna duda sobre el framework ven y participa en nuestro foro.
  - [Telegram](bit.ly/ng-venezuela-telegram): Ḿantente en contacto con los demas mienbros, enterete y comparte recursos y enlaces de interes con nosotros.
@@ -35,7 +35,7 @@ Somos una comunidad que promueve el aprendizaje colectivo, con miembros dispuest
 
 - English:
     - [JavaScript for Cats](http://jsforcats.com/): So easy your human companion could do it too !
-
+    - [Exercism.io](http://exercism.io/languages/javascript): Practica resolviendo ejercicios 
 
 ## Primeros Pasos
 ### Conceptos Basicos
@@ -174,10 +174,12 @@ angular.module('myReverseFilterApp', [])
 })
 ```
 primero se define el modulo de nuestra aplicación angular, luego se usa el método **filter** el cual recibe como primer parámetro el nombre de nuestro filtro personalizado y como segundo una función que retorna una nueva función en donde se especificaran los argumentos y la lógica que definirá nuestro nuevo formato.
+
 [Volver Indice](#conceptos-basicos)
 
 ### Data Binding
 Data-bindig en aplicaciones Angular hace referencia a la sincronización automática entre los los componentes del modelo ([Model](#models)) y las vista (Views).  Lo cual conlleva a que todo cambio realizado en el modelo estos serán reflejados en la vista y viceversa. Este proceso es conocido como Two-Way Data Binding, donde podemos considerar la vista como una proyección instantánea del modelo, lo que deja a el controlador ([controller](#controllers)) completamente separador de la vista e inconsciente de esta, facilitando las tareas de testing debido a que testear el controlador de forma aislada sin la vista y lo relacioando con dependecias DOM/Browser.
+
 [Volver Indice](#conceptos-basicos)
 
 ### Dependecy Injection
@@ -187,6 +189,31 @@ Data-bindig en aplicaciones Angular hace referencia a la sincronización automá
 [Volver Indice](#conceptos-basicos)
 
 ### Templates
+En Angular, las plantillas (templates) son escritas en HTML que a su vez contiene Elementos y atributos especificos de Angular. Angular combina la plantilla con informacion proveniente de los modelos y el controlador para rednderizar una vista dinamica que visualizará el usuario en el navegador.
+
+Tipos y atributos disponibles en Angular:
+- [Directivas](#directives)
+- Markup
+- [Filtros](#filters)
+- Controles de Formulario
+
+En la documentación oficial de Angular podemos encontrar este ejemplo:
+
+```html
+<html ng-app>
+ <!-- Body tag augmented with ngController directive  -->
+ <body ng-controller="MyController">
+   <input ng-model="foo" value="bar">
+   <!-- Button tag with ng-click directive, and
+          string expression 'buttonText'
+          wrapped in "{{ }}" markup -->
+   <button ng-click="changeFoo()">{{buttonText}}</button>
+   <script src="angular.js">
+ </body>
+</html>
+```
+
+En el caso de aplicaciones grandes y complejas, se puede cargar varias vistas dentro de una pagina principal usando partials (Parciales: segmentos de templantillas divididas en varios archivos html). Para esto nos podemos apoyara en la directiva **ngView** para cargar nuestros Partials basada en la configuracion pasada por el servicio $route.
 [Volver Indice](#conceptos-basicos)
 
 ### Forms
@@ -196,6 +223,7 @@ Data-bindig en aplicaciones Angular hace referencia a la sincronización automá
 
 - [Angular-resource](https://code.angularjs.org/1.4.4/angular-resource.min.js): el módulo **ngResource** provee soporte para interactuar con servicios REST-Full por medio del servicio **$resource**. 
 - [Angular-route](https://code.angularjs.org/1.4.4/angular-route.min.js): el modulo **ngRoute** provee servicios de enrutemiento y enlazado profundo, asi como tambien directivas para Aplicaciones Angular.
+- [AngularUI Router](https://github.com/angular-ui/ui-router): Routing flexible en Angularjs
 
 [Volver](#ngvenezuela)
 
